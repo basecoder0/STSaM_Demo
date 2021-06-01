@@ -40,5 +40,26 @@ Feel free to modify it as you see fit.
 # Model Architecture
 ![Model Architecture](./images/Model%20Architecture.PNG)
 
+# Audio Layer (CNN) Processing
+Convolutional layers are great at scanning and capturing interesting features on each
+channel in a 2D space. 1D Convolutional layers are great at scanning 1D sequences of data based on a timeseries, in the
+case of this project signals. Much like the 2D Convolutional layers, the 1D layers with 128 units, will sample the raw data (MFCC
+features) with a shape of (216,1) using a kernel of size 5 as well as keeping the padding the ‘same’ to preserve the input
+shape. 
+-  I pad the input to maintain the frequency spectrum as different emotions can be represented by different
+periods and amplitudes in a sound wave, since convolutional layers downsize a sample based on the kernel used, it would ultimately be removing the
+context which can describe an emotion, so I want to preserve as much as we can. 
+
+![Periods and Frequencies](./images/periods%20and%20frequencies.PNG)
+
+-  I apply a Dropout layer, for the purpose of overfitting as well as a maxpooling layer to down sample our dataset by a factor of 8.
+
+-  After extracting all the interesting features using the 1D Convolutional layers, I flatten the features into a
+shape (,3456) tensor.
+
+- Lastly the data is then processed through the Dense layers where the features are applied to an output
+layer using softmax. 
+
+# Experiments/Results
 
 
