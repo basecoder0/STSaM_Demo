@@ -62,7 +62,7 @@ layer using softmax.
 
 # Experiments/Results
 
-## Binary Classification {Happy, Sad}
+### Binary Classification {Happy, Sad}
 ![Binary Classification Results](./images/Binary%20Classification%20Results.PNG)
 ![Figure A Results](./images/Fig%20A%20results.PNG)
 ![Figure B Results](./images/Fig%20B%20results.PNG)
