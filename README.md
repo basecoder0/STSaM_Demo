@@ -62,4 +62,21 @@ layer using softmax.
 
 # Experiments/Results
 
+## Binary Classification {Happy, Sad}
+![Binary Classification Results](./images/Binary%20Classification%20Results.PNG)
+![Figure A Results](./images/Fig%20A%20results.PNG)
+![Figure B Results](./images/Fig%20B%20results.PNG)
+
+# Summary of Results
+Based on what I’ve observed, for *Model/Fig A*, this model seems to have the most accurate prediction out of two for classifying 2 types of moods. Given that it does have the lowest test accuracy score, looking at the model accuracy and loss graph **Fig A1**, you can see that while there is a lot of noise, the generalization gap is quite small when compared to *Model/Fig B*. 
+
+Running some live tests on Model B, while it is able to generalize on a mood, in my opinion it is not as confident as Model A. And even though the confusion matrix **Fig B2**  shows better prediction scores, you can see in the model accuracy and loss graph **Fig B1** that overfitting happens earlier around 25 epochs and the generalization gap is a bit larger than its counterpart, I feel this is why Model B does not perform as well as the scores indicate. 
+While the Confusion Matrices were able to show how well these models generalized on the unseen test data, I believe the scores are weighted slightly higher due to the low amount of test samples
+
+# Final Thoughts
+Due to the low amount of samples used in this projects training this model was a slight challenge however it is still doable.
+I was able to classify 2 types of emotions Happy and Sad, I did build another model for multi-classification purposes which 
+classifies 'Neutral' as well but I choose to omit that from this write up.
+
+
 
