@@ -1,5 +1,5 @@
 # STSaM_Demo
-Speech Text Sentiment analysis Model
+Speech Text Sentiment analysis Model *(Proof of Concept)*
 
 # Datasets used to train this model
 SAVEE
@@ -36,6 +36,8 @@ text into a usable format that can be processed by the model. Currently I am tra
 reviews dataset, the features for the encoded string is currently at 10000. I could possibly use an encoding method with
 smaller features but for the sake of testing this idea, this is the state for how the text should be transformed when being fed into the model.
 Feel free to modify it as you see fit.
+
+Also, and I may be stating the obvious here, but be sure the label classifications match the model input. Since this model is processing to different types of input MFCC/O.H.E features, make sure the 'Happy' text is paired with 'Happy' sound waves and the same goes for Sad and whatever other emotion. I have that process setup in the actual code so no worries.
 
 # Model Architecture
 ![Model Architecture](./images/Model%20Architecture.PNG)
@@ -74,9 +76,14 @@ Running some live tests on Model B, while it is able to generalize on a mood, in
 While the Confusion Matrices were able to show how well these models generalized on the unseen test data, I believe the scores are weighted slightly higher due to the low amount of test samples
 
 # Final Thoughts
-Due to the low amount of samples used in this projects training this model was a slight challenge however it is still doable.
+Given that there aren't a lot of training samples for this prjoect, training this model was a slight challenge however it is still doable.
 I was able to classify 2 types of emotions Happy and Sad, I did build another model for multi-classification purposes which 
-classifies 'Neutral' as well but I choose to omit that from this write up.
+classifies a 'Neutral' emotion as well but I choose to omit that from this write up, I will load .h5 file to this repository. I say these models,
+are able to prove my initial concept for this project, and if I decide too in the future to pursue this idea further, I could be able to build a model that is 
+able to classify more subtle emotions like ‘Calm’ and distinguish between more expressive emotions like ‘Disgust’ and ‘Surprised.
 
 
-
+# Sources
+- Speech Emotion Analyzer https://github.com/MITESHPUTHRANNEU/Speech-Emotion-Analyzer 
+- Direct access to your webcam and microphone inside Google Colab notebook https://ricardodeazambuja.com/deep_learning/2019/03/09/audio_and_video_google_colab/ 
+- Convert Speech to Text in Python https://www.thepythoncode.com/article/using-speechrecognition-to-convert-speech-to-text-python  
